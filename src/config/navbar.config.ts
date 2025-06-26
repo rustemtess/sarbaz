@@ -1,31 +1,37 @@
-export type SiteConfig = typeof siteConfig;
+export interface ItemType {
+  isMobile?: boolean;
+  label: string;
+  href: string;
+}
 
-export const siteConfig = {
-  name: "Vite + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
-  navItems: [
+export const navbarConfig = {
+  items: [
     {
+      isMobile: false,
       label: "Главная",
       href: "/",
     },
     {
+      isMobile: true,
       label: "Профиль",
       href: "/profile",
     },
     {
+      isMobile: false,
       label: "Статьи",
-      href: "/blog",
+      href: "/#",
     },
     {
+      isMobile: false,
       label: "FAQ",
       href: "/faq",
     },
   ],
-  navAuth: {
-    label: "Авторизация",
+  authItem: {
+    label: "Войти",
     href: "/login",
   },
-  navMenuItems: [
+  profileItems: [
     {
       label: "Главная",
       href: "/",
@@ -44,14 +50,7 @@ export const siteConfig = {
     },
     {
       label: "Выйти",
-      href: "/logout",
+      href: "/",
     },
   ],
-  links: {
-    github: "https://github.com/frontio-ai/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    au: "https://patreon.com/jrgarciadev",
-  },
 };

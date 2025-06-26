@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .custom-steps .ant-steps-item-finish,
+  .custom-steps .ant-steps-item-process,
+  .custom-steps .ant-steps-item-title {
+    @apply text-default-600 !important;
+  }
+
+  .custom-steps .ant-steps-item-process .ant-steps-icon-dot {
+    @apply bg-orange-400 !important;
+  }
+
+  .custom-steps .ant-steps-item-wait .ant-steps-icon-dot {
+    @apply bg-default-300 !important;
+  }
+
+  .custom-steps .ant-steps-item-description {
+    @apply text-gray-500 text-sm !important;
+  }
+
+  .custom-steps .ant-steps-item-tail::after {
+    @apply bg-default-300 !important;
+  }
+}
